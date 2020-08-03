@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Aplikasi Informasi Sepak Bola</title>
+</head>
+<body>
+    <header>
+        <nav-bar></nav-bar>
+    </header>
+
+    <main>
+        <select-league class="select-standings"></select-league>
+
+        <div class="content-standings">
+            <table-standings></table-standings>
+        </div>
+        
+        <div class="content-matches" style="display: none;">
+            <date-matches></date-matches>
+            <table-matches></table-matches>
+        </div>
+
+        <div class="content-clubs-saved" style="display: none;">
+            <clubs-saved></clubs-saved>
+        </div>
+    </main>
+
+    <progress-bar style="display: none;"></progress-bar>
+</body>
+</html>
