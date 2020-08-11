@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const CopyPlugin = require('copy-webpack-plugin');
+const WorboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -69,10 +69,9 @@ module.exports = {
               }
             ]
         }),
-        new CopyPlugin({
-            patterns: [
-                { from: 'service-worker.js', to: 'service-worker.js'}
-            ]
+        new WorboxPlugin.InjectManifest({
+            swSrc: './service-worker.js',
+            swDest: 'service-worker.js'
         })
     ]
 }

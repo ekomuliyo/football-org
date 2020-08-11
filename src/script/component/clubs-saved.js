@@ -24,7 +24,7 @@ class ClubsSaved extends HTMLElement {
                             <div class="card-content">
                                 <div class="row">
                                         <div class="col s12 m12 l12 center-align">
-                                            <img src="${club.crestUrl}" style="max-width: 150px;" alt="Logo Club ${club.shortName}">
+                                            <img src="${club.crestUrl.replace(/^http:\/\//i, 'https://')}" style="max-width: 150px;" alt="Logo Club ${club.shortName}">
                                         </div>
                                         <div class="col s12 m12 l12 center-align">
                                             <h4>${club.shortName}</h4>

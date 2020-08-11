@@ -1,0 +1,76 @@
+{
+  "icons": [
+    {
+      "src": "icons/android/icon_512x512.16d198f9dec76945ed438e8516ba31eb.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_192x192.21c6319d2834e49c90c8b12eff106141.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_144x144.da07caf4a25134d4221a6e71b29b77d1.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_96x96.9b92498b40cbbdcc2010a8bfca7c6c5c.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_72x72.be1470bd6b91db3bf5881d01a9af3b36.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_48x48.1f2950ade4c6f58b1fb18b04ff7c595b.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/android/icon_36x36.972090bd64c094f64bdc2eba6d8a4e49.png",
+      "sizes": "36x36",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_1024x1024.3ab75dfffd9a0001866f5e4500a74bf7.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_1024x1024.3ab75dfffd9a0001866f5e4500a74bf7.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_180x180.930bafa487bdb38baeabf22cc2acc95a.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_167x167.dce54007bb54a6af2c1b02912f35b0ad.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_152x152.899d6d297d7f2b5eb9d95b0504da36ed.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/ios/icon_120x120.edc373af52c76db93f44d75236768e4a.png",
+      "sizes": "120x120",
+      "type": "image/png"
+    }
+  ],
+  "name": "Informasi Sepak Bola",
+  "short_name": "Sepak Bola",
+  "orientation": "portrait",
+  "display": "fullscreen",
+  "start_url": "./index.html",
+  "theme_color": "#66bb6a",
+  "background_color": "#4e9452"
+}

@@ -90,6 +90,15 @@ class NavBar extends HTMLElement {
                     contentMatches.style.display = 'none';
                 }
             }
+
+            const elemsDatepicker = document.querySelectorAll('.datepicker');
+            M.Datepicker.init(elemsDatepicker, {
+                format: 'yyyy-mm-dd',
+                autoClose: true,
+                setDefaultDate: true,
+                defaultDate: new Date()
+            });
+            
             });
         });
     }

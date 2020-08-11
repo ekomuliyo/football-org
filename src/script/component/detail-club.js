@@ -27,7 +27,7 @@ class DetailClub extends HTMLElement {
                         <div class="card-content">
                             <div class="row">
                                 <div class="col s12 m12 l12 center-align">
-                                    <img src="${this._club.crestUrl}" style="max-width: 150px;" alt="Logo Klub ${this._club.shortName}">
+                                    <img src="${this._club.crestUrl.replace(/^http:\/\//i, 'https://')}" style="max-width: 150px;" alt="Logo Klub ${this._club.shortName}">
                                 </div>
                                 <div class="col s12 m12 l12 center-align">
                                     <h4>${this._club.shortName}</h4>

@@ -12,6 +12,27 @@ import '../component/date-matches.js';
 import '../component/clubs-saved.js';
 
 const main = () => {
+
+    window.addEventListener('load', function(){
+        // cek support service worker
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker
+            .register('/service-worker.js')
+            .then(() => console.log('berhasil menambahkan service worker'))
+            .catch(() => console.log('gagal menambahkan service worker'));
+        }
+        else{
+            alert('browser tidak mendukung service worker');
+        }
+        
+        const page = window.location.pathname;
+        if(page !== '/club-detail.html') {
+            onSelectChange();
+        }
+
+        requestPermission();
+    });
+    
     window.addEventListener('click', function(e) {
         
         const page =  e.target.getAttribute('href');
@@ -184,24 +205,24 @@ const main = () => {
                                         applicationServerKey: urlBase64ToUint8Array('BPSnMR4h4cXaFeELtSSpaG5fvphdcepacF082NeFVP25fywZ_rsx8UmgKxnmuqVAABVcU3NINHgWGa37AT79ysU')
                                     })
                                     .then(subscribe => {
-                                        // console.log(`Berhasil melakukan subcribe dengan endpoint: ${subscribe.endpoint}`);
+                                        console.log(`Berhasil melakukan subcribe dengan endpoint: ${subscribe.endpoint}`);
                                         
-                                        // console.log(`Berhasil melakukan subcribe dengan p256dh key : ${btoa(String.fromCharCode.apply(
-                                        //     null, new Uint8Array(subscribe.getKey('p256dh'))
-                                        // ))}`);
+                                        console.log(`Berhasil melakukan subcribe dengan p256dh key : ${btoa(String.fromCharCode.apply(
+                                            null, new Uint8Array(subscribe.getKey('p256dh'))
+                                        ))}`);
         
-                                        // console.log(`Berhasil melakukan subcribe dengan auth key : ${btoa(String.fromCharCode.apply(
-                                        //     null, new Uint8Array(subscribe.getKey('auth'))
-                                        // ))}`);
+                                        console.log(`Berhasil melakukan subcribe dengan auth key : ${btoa(String.fromCharCode.apply(
+                                            null, new Uint8Array(subscribe.getKey('auth'))
+                                        ))}`);
                                         
                                     })
                                     .catch(err => {
                                         console.error(`Tidak dapat melakukan subcribe ${err.message}`);
                                     });
 
-                                    // unsubcribe
-                                    // registration.pushManager.getSubscription().then(p => {
-                                    //     p.unsubscribe();
+                                    // // unsubcribe
+                                    // registration.pushManager.getSubscription().then(pushSub => {
+                                    //     pushSub.unsubscribe();
                                     // });
                                 });
                         }
@@ -224,35 +245,6 @@ const main = () => {
         }
         return outputArray;
     };
-
-    window.addEventListener('load', function(){
-        // cek support service worker
-        if('serviceWorker' in navigator){
-            navigator.serviceWorker
-            .register('/service-worker.js')
-            .then(() => console.log('berhasil menambahkan service worker'))
-            .catch(() => console.log('gagal menambahkan service worker'));
-        }
-        else{
-            alert('browser tidak mendukung service worker');
-        }
-
-        
-        const page = window.location.pathname;
-        if(page !== '/club-detail.html') {
-            onSelectChange();
-        }
-
-        const elemsDatepicker = document.querySelectorAll('.datepicker');
-        M.Datepicker.init(elemsDatepicker, {
-            format: 'yyyy-mm-dd',
-            autoClose: true,
-            setDefaultDate: true,
-            defaultDate: new Date()
-        });
-
-        requestPermission();
-    });
     
 };
 

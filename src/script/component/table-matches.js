@@ -62,7 +62,6 @@ class TableMatches extends HTMLElement {
         }
 
         document.querySelector('#tbody-matches').innerHTML = rowData;
-        // console.log(rowData);
     }
 }
 

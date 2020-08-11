@@ -1,5 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 
+workbox.core.skipWaiting();
+workbox.core.clientsClaim();
 
 workbox.precaching.precacheAndRoute([
     {url: '/', revision: '1' },
@@ -75,9 +77,11 @@ self.addEventListener('push', function (event) {
         dateOfArrival: Date.now(),
         primaryKey: 1
       }
-    }
+    };
   
     event.waitUntil(
       self.registration.showNotification('Ada Notifikasi Baru :)', options)
-    )
-  })
+    );
+  });
+
+  self.__WB_MANIFEST;

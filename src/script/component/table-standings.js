@@ -50,7 +50,7 @@ class TableStandings extends HTMLElement {
                                 <td>${++index}</td>
                                 <td>
                                     <a href="./club-detail.html?id=${klub.team.id}">
-                                    <img src="${klub.team.crestUrl}" width="17px" alt="Logo Klub ${klub.team.name}"> &nbsp; ${klub.team.name}
+                                    <img src="${klub.team.crestUrl.replace(/^http:\/\//i, 'https://')}" width="17px" alt="Logo Klub ${klub.team.name}"> &nbsp; ${klub.team.name}
                                     </a>
                                 </td>
                                 <td>${klub.playedGames}</td>
@@ -71,7 +71,7 @@ class TableStandings extends HTMLElement {
                         <td>${++index}</td>
                         <td>
                             <a href="./club-detail.html?id=${klub.team.id}">
-                            <img src="${klub.team.crestUrl}" width="17px" alt="Logo Klub ${klub.team.name}"> &nbsp; ${klub.team.name}
+                            <img src="${klub.team.crestUrl.replace(/^http:\/\//i, 'https://')}" width="17px" alt="Logo Klub ${klub.team.name}"> &nbsp; ${klub.team.name}
                             </a>
                         </td>
                         <td>${klub.playedGames}</td>
